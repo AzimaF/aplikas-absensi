@@ -31,6 +31,7 @@ function EyeIcon({ open }) {
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useApp();
+  const logoSrc = `${import.meta.env.BASE_URL}Logo.png`;
   const [nik, setNik] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -64,7 +65,7 @@ export default function Login() {
       <div className="login-container">
         <div className="login-card">
           <div className="login-logo">
-            <img className="logo-circle" src="/Logo.png" alt="AttendanceOS" />
+            <img className="logo-circle" src={logoSrc} alt="AttendanceOS" />
             <h1>AttendanceOS</h1>
             <p>Sistem Presensi Online Karyawan</p>
           </div>

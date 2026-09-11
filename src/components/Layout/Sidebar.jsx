@@ -44,6 +44,7 @@ export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, logout } = useApp();
+  const logoSrc = `${import.meta.env.BASE_URL}Logo.png`;
 
   if (!user) return null;
 
@@ -66,7 +67,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <img className="logo-icon" src="/Logo.png" alt="AttendanceOS" />
+        <img className="logo-icon" src={logoSrc} alt="AttendanceOS" />
         <div>
           <h2>AttendanceOS</h2>
           <p>Sistem Presensi Online</p>
