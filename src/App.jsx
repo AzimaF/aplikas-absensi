@@ -69,7 +69,8 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    // Tambahkan basename di sini sesuai nama repository GitHub Anda
+    <BrowserRouter basename="/aplikas-absensi">
       <AppProvider>
         <AppRoutes />
       </AppProvider>
